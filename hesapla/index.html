@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HesaplaMax - Online Hesaplama Araçları</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-calculator"></i> HesaplaMax
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Matematik -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Matematik</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-calculator="ebob-ekok" data-description="İki sayının en büyük ortak bölenini ve en küçük ortak katını hesaplar">EBOB EKOK</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="faktoriyel" data-description="Bir sayının faktöriyelini hesaplar">Faktöriyel</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="kok" data-description="Herhangi bir dereceden köklü sayı hesaplaması yapar">Köklü Sayılar</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="uslu" data-description="Üslü sayı hesaplaması yapar">Üslü Sayılar</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="kombinasyon" data-description="Kombinasyon hesaplaması yapar">Kombinasyon</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="permutasyon" data-description="Permütasyon hesaplaması yapar">Permütasyon</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="mod" data-description="Modüler aritmetik işlemleri yapar">Modüler Aritmetik</a></li>
+                        </ul>
+                    </li>
+                    <!-- Finans -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Finans</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-calculator="kredi" data-description="Kredi taksit ve toplam ödeme hesaplaması yapar">Kredi</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="faiz" data-description="Basit ve bileşik faiz hesaplaması yapar">Faiz</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="maas" data-description="Brüt maaştan net maaş hesaplaması yapar">Maaş</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="kdv" data-description="KDV tutarı ve KDV'li fiyat hesaplaması yapar">KDV</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="kira-gelir" data-description="Kira gelir vergisi hesaplaması yapar">Kira Gelir</a></li>
+                        </ul>
+                    </li>
+                    <!-- Sağlık -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sağlık</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-calculator="vki" data-description="Vücut kitle indeksi hesaplaması yapar">Vücut Kitle İndeksi</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="kalori" data-description="Günlük kalori ihtiyacını hesaplar">Kalori İhtiyacı</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="ideal-kilo" data-description="Boy ve vücut yapısına göre ideal kilo hesaplaması yapar">İdeal Kilo</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="protein" data-description="Günlük protein ihtiyacını hesaplar">Protein İhtiyacı</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="yag-orani" data-description="Vücut yağ oranı hesaplaması yapar">Vücut Yağ Oranı</a></li>
+                        </ul>
+                    </li>
+                    <!-- Zaman -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Zaman</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-calculator="yas" data-description="Doğum tarihine göre yaş hesaplaması yapar">Yaş</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="tarih-fark" data-description="İki tarih arasındaki farkı hesaplar">Tarih Farkı</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="is-gunu" data-description="İki tarih arasındaki iş günü sayısını hesaplar">İş Günü</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="ramadan" data-description="Ramazan ayı tarihlerini ve kalan günleri hesaplar">Ramazan Günü</a></li>
+                        </ul>
+                    </li>
+                    <!-- Geometri -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Geometri</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-calculator="alan" data-description="Çeşitli geometrik şekillerin alanını hesaplar">Alan</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="cevre" data-description="Çeşitli geometrik şekillerin çevresini hesaplar">Çevre</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="hacim" data-description="Çeşitli geometrik cisimlerin hacmini hesaplar">Hacim</a></li>
+                        </ul>
+                    </li>
+                    <!-- Eğitim -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Eğitim</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-calculator="not-ortalama" data-description="Ders notlarına göre ortalama hesaplaması yapar">Not Ortalaması</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="takdir-tesekkur" data-description="Takdir ve teşekkür belgesi durumunu hesaplar">Takdir Teşekkür</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="universite-puan" data-description="TYT puanı hesaplaması yapar">Üniversite Puanı</a></li>
+                        </ul>
+                    </li>
+                    <!-- Araç -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Araç</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-calculator="yakit" data-description="Araç yakıt tüketimi ve maliyeti hesaplama">Yakıt Tüketimi</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="mesafe" data-description="Yol, mesafe ve süre hesaplama">Yol/Mesafe/Süre</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="mtv" data-description="Motorlu Taşıtlar Vergisi hesaplama">MTV</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="deger-kaybi" data-description="Araç değer kaybı hesaplama">Değer Kaybı</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="lpg" data-description="LPG dönüşüm tasarruf hesaplama">LPG Tasarruf</a></li>
+                        </ul>
+                    </li>
+                    <!-- Spor -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Spor</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-calculator="max-nabiz" data-description="Maksimum kalp atış hızı ve hedef nabız aralığı hesaplama">Maksimum Nabız</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="kalori-yakim" data-description="Aktiviteye göre kalori yakımı hesaplama">Kalori Yakımı</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="1rm" data-description="Maksimum tek tekrar ağırlığı hesaplama">1RM</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="antrenman" data-description="Antrenman yoğunluğu ve set hesaplama">Antrenman</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="tempo" data-description="Koşu temposu ve hedef süre hesaplama">Koşu Temposu</a></li>
+                        </ul>
+                    </li>
+                    <!-- Ev/Emlak -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Ev/Emlak</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-calculator="taksit-kira" data-description="Ev taksit/kira oranı ve uygunluk hesaplama">Taksit/Kira Oranı</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="emlak-vergi" data-description="Emlak vergisi hesaplama">Emlak Vergisi</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="yalitim" data-description="Isı yalıtımı tasarruf hesaplama">Yalıtım Tasarrufu</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="tapu" data-description="Tapu harcı hesaplama">Tapu Harcı</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="komisyon" data-description="Emlak komisyon hesaplama">Komisyon</a></li>
+                        </ul>
+                    </li>
+                    <!-- İş/Kariyer -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">İş/Kariyer</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-calculator="mesai" data-description="Fazla mesai ücreti hesaplama">Mesai Ücreti</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="agi" data-description="Asgari Geçim İndirimi hesaplama">AGİ</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="kidem" data-description="Kıdem tazminatı hesaplama">Kıdem Tazminatı</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="ihbar" data-description="İhbar tazminatı hesaplama">İhbar Tazminatı</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="emeklilik" data-description="Emeklilik tarih ve şartları hesaplama">Emeklilik</a></li>
+                        </ul>
+                    </li>
+                    <!-- Dönüşüm -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Dönüşüm</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-calculator="para-birimi" data-description="Para birimi dönüştürme">Para Birimi</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="sicaklik" data-description="Sıcaklık birimi dönüştürme">Sıcaklık</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="uzunluk" data-description="Uzunluk birimi dönüştürme">Uzunluk</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="agirlik" data-description="Ağırlık birimi dönüştürme">Ağırlık</a></li>
+                            <li><a class="dropdown-item" href="#" data-calculator="dijital" data-description="Dijital birim dönüştürme">Dijital Birimler</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ana İçerik -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sol Sidebar -->
+            <div class="col-md-3 mb-4">
+                <div class="list-group">
+                    <div class="list-group-item active">Popüler Hesaplamalar</div>
+                    <a href="#" class="list-group-item list-group-item-action" data-calculator="vki" data-description="Vücut kitle indeksi hesaplaması yapar">
+                        <i class="fas fa-weight me-2"></i> VKİ Hesaplama
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" data-calculator="kredi" data-description="Kredi taksit ve toplam ödeme hesaplaması yapar">
+                        <i class="fas fa-money-bill-wave me-2"></i> Kredi Hesaplama
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" data-calculator="yas" data-description="Doğum tarihine göre yaş hesaplaması yapar">
+                        <i class="fas fa-birthday-cake me-2"></i> Yaş Hesaplama
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" data-calculator="kdv" data-description="KDV tutarı ve KDV'li fiyat hesaplaması yapar">
+                        <i class="fas fa-receipt me-2"></i> KDV Hesaplama
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" data-calculator="alan" data-description="Çeşitli geometrik şekillerin alanını hesaplar">
+                        <i class="fas fa-draw-polygon me-2"></i> Alan Hesaplama
+                    </a>
+                </div>
+
+                <div class="list-group mt-4">
+                    <div class="list-group-item active">Yeni Eklenenler</div>
+                    <a href="#" class="list-group-item list-group-item-action" data-calculator="protein" data-description="Günlük protein ihtiyacını hesaplar">
+                        <i class="fas fa-drumstick-bite me-2"></i> Protein İhtiyacı
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" data-calculator="is-gunu" data-description="İki tarih arasındaki iş günü sayısını hesaplar">
+                        <i class="fas fa-business-time me-2"></i> İş Günü Hesaplama
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" data-calculator="kombinasyon" data-description="Kombinasyon hesaplaması yapar">
+                        <i class="fas fa-random me-2"></i> Kombinasyon
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ana İçerik Alanı -->
+            <div class="col-md-9">
+                <div id="calculator-container">
+                    <div class="text-center py-5" id="welcome-message">
+                        <h1 class="mb-4">HesaplaMax'a Hoş Geldiniz</h1>
+                        <p class="lead mb-5">
+                            Yüzlerce hesaplama aracına tek tıkla ulaşın.
+                            Soldaki menüden veya üst menüden bir hesaplama aracı seçin.
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col-md-4">
+                                <i class="fas fa-calculator fa-3x" style="color: #ca6116"></i>
+                                <h4>Kolay Kullanım</h4>
+                                <p>Basit ve anlaşılır arayüz</p>
+                            </div>
+                            <div class="col-md-4">
+                                <i class="fas fa-bolt fa-3x" style="color: #ca6116"></i>
+                                <h4>Hızlı Sonuç</h4>
+                                <p>Anında hesaplama</p>
+                            </div>
+                            <div class="col-md-4">
+                                <i class="fas fa-check-circle fa-3x" style="color: #ca6116"></i>
+                                <h4>Doğru Hesaplama</h4>
+                                <p>Güvenilir sonuçlar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 HesaplaMax - Tüm hakları saklıdır.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="me-3">Hakkında</a>
+                    <a href="#" class="me-3">İletişim</a>
+                    <a href="#">Gizlilik</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
